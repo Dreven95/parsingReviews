@@ -11,8 +11,12 @@ print(productName.get_text())review = bs.findAll('div', 'container-reviews colla
 #     print(elem.get_text())#
 # for elem in reviewText:#     print(elem)
 for biba in review:
-    reviewAuthor = biba.find('span', 'user')    reviewDate = biba.find('span', 'date')
-    reviewStars = biba.find('div', 'stars-container')['title']    print("Author: ", reviewAuthor.get_text())
-    print("Date: ", reviewDate.get_text())    # print("Stars: ", reviewStars.get_text())
-    reviewText = biba.findAll('p')    for elem in biba:
-        print(elem.get_text())
+    reviewAuthor = biba.find('span', 'user')
+    reviewDate = biba.find('span', 'date')
+    reviewStars = biba.find('div', 'stars-container')['title']
+    print("Author: ", reviewAuthor.get_text())
+    print("Date: ", reviewDate.get_text())
+    # print("Stars: ", reviewStars.get_text())
+    reviewText = biba.findAll('p')
+        for elem in biba:
+            print(elem.get_text())
